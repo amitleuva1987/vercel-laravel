@@ -747,7 +747,9 @@ Earlier this year, <b>Russell did a private 2 day event</b> called "Traffic Secr
 <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-99463" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="elIMG ximg" alt="" tabindex="0" data-src="https://trafficsecrets.com/hosted/images/85/634f56ec324f90bcedf9a0095864d6/Traffic-Secrets_AUDIOBOOK_1-min.png">
 </div>
-<form><div class="de clearfix elOrderProductOptionsWrapper elMargin0 ui-droppable de-editable" id="tmp_orb-75913" data-de-type="orb" data-de-editing="false" data-title="cf-bump-box-XXXXXX" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
+<form>
+@csrf  
+<div class="de clearfix elOrderProductOptionsWrapper elMargin0 ui-droppable de-editable" id="tmp_orb-75913" data-de-type="orb" data-de-editing="false" data-title="cf-bump-box-XXXXXX" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
 <div class="dashed orderFormBump radius5 shadow0 borderLight" style="border: 3px dashed rgb(186, 241, 202); padding: 10px; background-color: rgb(217, 255, 228);">
 <div class="sectioncontent">
 <div style="padding: 1px 10px; margin-bottom: 10px; background-color: rgb(186, 241, 202); text-align: center;">
@@ -803,7 +805,9 @@ Earlier this year, <b>Russell did a private 2 day event</b> called "Traffic Secr
 <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-99463-163" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="elIMG ximg" alt="" tabindex="0" data-src="https://trafficsecrets.com/hosted/images/37/0f8c46a305461e9e5f2ab5fa99d05e/Traffic-Secrets-Book-bump-3-EVENTS-min.png">
 </div>
-<form><div class="de clearfix elOrderProductOptionsWrapper elMargin0 ui-droppable de-editable" id="tmp_orb-75913-171" data-de-type="orb" data-de-editing="false" data-title="cf-bump-box-YYYYYY" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
+<form>
+@csrf  
+<div class="de clearfix elOrderProductOptionsWrapper elMargin0 ui-droppable de-editable" id="tmp_orb-75913-171" data-de-type="orb" data-de-editing="false" data-title="cf-bump-box-YYYYYY" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
 <div class="dashed orderFormBump radius5 shadow0 borderLight" style="border: 3px dashed rgb(186, 241, 202); padding: 10px; background-color: rgb(217, 255, 228);">
 <div class="sectioncontent">
 <div style="padding: 1px 10px; margin-bottom: 10px; background-color: rgb(186, 241, 202); text-align: center;">
@@ -1986,6 +1990,7 @@ window.addEventListener('load', function(){
 <a href="https://www.clickfunnels.com/?aff_sub2=badge&amp;aff_sub=not_paid" target="_blank"><img src="//scale.discover360.app/hosted/images/3d/392630953c4119a324492bb1c05778/ClickfunnelsTag.png" alt="Powered By ClickFunnels.com" onclick="ga('send', 'event', 'Free Badge', 'Click', 'View ClickFunnels.com');" data-lazy-loading="false" style="width: 164px;"></a>
 </div>
 <form target="_parent" data-cf-form-action="true" action="https://scale.discover360.app/ads" method="post" id="cfAR" style="display:none">
+@csrf
 <span data-cf-form-fields="true"></span>
 <input id="cf_contact_name" name="contact[name]" data-cf-form-field="name" placeholder="name" data-stripe="name">
 <input id="cf_contact_first_name" name="contact[first_name]" data-cf-form-field="first_name" placeholder="first_name" data-recurly="first_name">
