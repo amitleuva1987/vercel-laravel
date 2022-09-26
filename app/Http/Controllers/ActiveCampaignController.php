@@ -46,6 +46,8 @@ class ActiveCampaignController extends Controller
 
     public function storeContact(Request $request)
     {
+        echo "enter store contact page";
+        exit;
         $api_key = env("AVTIVE_CAMPAIGN_KEY");
         if(Session::has('contactId')){
             Session::forget('contactId');
