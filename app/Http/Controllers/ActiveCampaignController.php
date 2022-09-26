@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -15,8 +16,6 @@ class ActiveCampaignController extends Controller
     public function page2()
     {
         Session::put('pageStartTime',Date('Y-m-d H:i:s'));
-        echo Session::get('pageStartTime');
-        exit;
         return view('campaign.page2');
     }
 
@@ -100,8 +99,8 @@ class ActiveCampaignController extends Controller
 
     public function storePage2tags()
     {
-        $to = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Session::get('pageStartTime'));
-        $from = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Date('Y-m-d H:i:s'));
+        $to = Carbon::createFromFormat('Y-m-d H:i:s', Session::get('pageStartTime'));
+        $from = Carbon::createFromFormat('Y-m-d H:i:s', Date('Y-m-d H:i:s'));
 
         $diff_in_minutes = $to->diffInMinutes($from);
         Session::forget('pageStartTime');
