@@ -27,3 +27,5 @@ Route::post('/store_contact', [ActiveCampaignController::class, 'storeContact'])
 Route::get('/store_page_two_tags', [ActiveCampaignController::class, 'storePage2tags'])->name('store_page_two_tags');
 Route::post('/store_page_three_tags', [ActiveCampaignController::class, 'storePage3tags'])->name('store_page_three_tags');
 Route::get('/store_page_four_tags', [ActiveCampaignController::class, 'storePage4tags'])->name('store_page_four_tags');
+
+URL::forceScheme('https');
