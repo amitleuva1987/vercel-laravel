@@ -8,15 +8,15 @@ use Illuminate\Support\Facades\Session;
 
 class ActiveCampaignController extends Controller
 {
+
     public function page1()
     {
+        
         return view('campaign.page1');
     }
 
     public function page2()
     {
-        echo Session::get('contactId');
-        exit;
         Session::put('pageStartTime',Date('Y-m-d H:i:s'));
         return view('campaign.page2');
     }
