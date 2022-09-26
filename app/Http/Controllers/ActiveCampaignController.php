@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+//use Illuminate\Support\Facades\Session;
 
 class ActiveCampaignController extends Controller
 {
@@ -14,7 +14,7 @@ class ActiveCampaignController extends Controller
 
     public function page2()
     {
-        Session::put('pageStartTime',Date('Y-m-d H:i:s'));
+   //     Session::put('pageStartTime',Date('Y-m-d H:i:s'));
         
         return view('campaign.page2');
     }
@@ -26,21 +26,21 @@ class ActiveCampaignController extends Controller
 
     public function page4()
     {
-        if(Session::has('contactId')) {
+  //      if(Session::has('contactId')) {
             $this->saveTag(14);
-        }
+  //      }
 
         return view('campaign.page4');
     }
 
     public function page5()
     {
-        if(Session::has('contactId')) {
+//        if(Session::has('contactId')) {
             $this->saveTag(15);
             $this->saveTag(16);
             $this->saveTag(17);
             $this->saveTag(18);
-        }
+//        }
         return view('campaign.page5');
     }
 
@@ -49,9 +49,9 @@ class ActiveCampaignController extends Controller
         echo "enter store contact page";
         exit;
         $api_key = env("AVTIVE_CAMPAIGN_KEY");
-        if(Session::has('contactId')){
-            Session::forget('contactId');
-        }
+        // if(Session::has('contactId')){
+        //     Session::forget('contactId');
+        // }
 
         $name = explode(' ',$request->name);
         if(count($name) == 2){
@@ -79,7 +79,7 @@ class ActiveCampaignController extends Controller
         
         if($response->getStatusCode() == "200" || $response->getStatusCode() == "201") {
             $response_data = json_decode($response->getBody(),true);
-            Session::put('contactId', $response_data['contact']['id']);
+  //          Session::put('contactId', $response_data['contact']['id']);
             $this->saveTag(10);
             $this->saveTag(11);
             return redirect('/vsl');
@@ -101,19 +101,19 @@ class ActiveCampaignController extends Controller
 
     public function storePage2tags()
     {
-        $to = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Session::get('pageStartTime'));
+    //    $to = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Session::get('pageStartTime'));
         $from = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Date('Y-m-d H:i:s'));
 
         $diff_in_minutes = $to->diffInMinutes($from);
-        Session::forget('pageStartTime');
+//        Session::forget('pageStartTime');
 
-        if(Session::has('contactId')) {
+//        if(Session::has('contactId')) {
             $this->saveTag(12);
             if($diff_in_minutes > 15){
                 $this->saveTag(13);
             }
             return redirect('/survey');
-        }
+  //      }
     }
 
     
