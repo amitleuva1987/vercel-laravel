@@ -15,7 +15,8 @@ class ActiveCampaignController extends Controller
     public function page2()
     {
         Session::put('pageStartTime',Date('Y-m-d H:i:s'));
-        
+        echo Session::get('pageStartTime');
+        exit;
         return view('campaign.page2');
     }
 
